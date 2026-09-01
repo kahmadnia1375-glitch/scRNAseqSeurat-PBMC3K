@@ -1,1 +1,1 @@
-
+pbmc <- NormalizeData(pbmc)
