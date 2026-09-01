@@ -1,1 +1,1 @@
-
+pbmc <- ScaleData(pbmc)
