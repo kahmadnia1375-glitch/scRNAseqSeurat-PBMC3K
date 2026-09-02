@@ -24,3 +24,20 @@ write.csv(
   "DEG_top10_by_cell_type.csv",
   row.names = FALSE
 )
+marker_genes <- c(
+  "CCR7", "IL7R", "LTB",
+  "CD14", "S100A8", "S100A9",
+  "MS4A1", "CD79A",
+  "CD8A", "CD8B", "CCL5",
+  "NKG7", "GNLY", "GZMB",
+  "FCGR3A", "LYZ",
+  "FCER1A", "CD1C",
+  "PF4", "PPBP"
+)
+
+DotPlot(
+  pbmc,
+  features = marker_genes,
+  group.by = "cell_type"
+) +
+  RotatedAxis()
