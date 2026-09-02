@@ -69,3 +69,18 @@ ggsave(
   height = 9,
   dpi = 300
 )
+p_umap <- DimPlot(
+  pbmc,
+  reduction = "umap",
+  group.by = "cell_type",
+  label = TRUE,
+  repel = TRUE
+)
+
+ggsave(
+  "figures/umap_cell_types.png",
+  plot = p_umap,
+  width = 10,
+  height = 7,
+  dpi = 300
+)
